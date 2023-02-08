@@ -54,8 +54,8 @@ jobs:
           from: 'thunderbird.net'
           to: 's3://open-prs/dump/${CIRCLE_SHA1}/'
           arguments: |
-          --acl public-read \
-          --cache-control "max-age=86400"
+            --acl public-read \
+            --cache-control "max-age=86400"
           overwrite: true # default is false
 
 
