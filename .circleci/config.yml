@@ -50,6 +50,14 @@ jobs:
       - run:
           name: Build
           command: python ./build-site.py
+      - aws-s3/sync:
+          from: 'thunderbird.net'
+          to: 's3://open-prs/dump/${CIRCLE_SHA1}/'
+          arguments: |
+          --acl public-read \
+          --cache-control "max-age=86400"
+          overwrite: true # default is false
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
