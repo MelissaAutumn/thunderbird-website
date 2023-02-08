@@ -36,13 +36,13 @@ jobs:
       # Checkout some additional repos
       - run:
           name: Checkout thunderbird-notes
-          run: git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
+          command: git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
       - run:
           name: Checkout product-details
-          run: git clone -b production https://github.com/mozilla-releng/product-details.git
+          command: git clone -b production https://github.com/mozilla-releng/product-details.git
       - run:
           name: Install less
-          run: npm install -g less
+          command: npm install -g less
       #- run:
       #    name: Run tests
       #    # This assumes pytest is installed via the install-package step above
