@@ -57,8 +57,6 @@ jobs:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
-          overwrite: true # default is false
-
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
