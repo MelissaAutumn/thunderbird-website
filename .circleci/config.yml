@@ -54,8 +54,7 @@ jobs:
       - aws-s3/sync:
           from: 'thunderbird.net'
           to: 's3://open-prs/dump/${CIRCLE_SHA1}/'
-          arguments: |
-            --acl public-read
+          arguments: '--acl public-read'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
