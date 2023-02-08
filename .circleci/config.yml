@@ -42,7 +42,7 @@ jobs:
           command: git clone -b production https://github.com/mozilla-releng/product-details.git
       - run:
           name: Install less
-          command: npm install -g less
+          command: npm install less
       #- run:
       #    name: Run tests
       #    # This assumes pytest is installed via the install-package step above
